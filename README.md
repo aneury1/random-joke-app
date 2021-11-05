@@ -5,7 +5,9 @@ This application will the user of the application to see random Jokes.
 
 This application would be a showcase of how to use MVVM pattern in an android application
 
+it follow the design from:
 
+[Figma Design]()https://www.figma.com/file/tybhoB0l3jlSFDK0na3o0S/Untitled?node-id=0%3A1)
 
 ### Use case
 
@@ -45,6 +47,7 @@ me(Aneury Perez)
 
 #### External Dependecies information
 
+- [image PNG logo](https://www.pngwing.com/en/free-png-medyj)
 
 #### todo
 

@@ -1,4 +1,4 @@
-package com.aneury1.random_joke
+package com.aneury1.random_joke.View
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

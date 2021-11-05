@@ -29,9 +29,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
+
+    def VIEW_MODEL_VERSION  = "2.3.1"
+    def FRAGMENT_DATA_MODEL = "1.3.2"
+    def ACTIVITY_VERSION    = "1.2.2"
+    def RETROFIT_2_VERSION  = "2.9.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
@@ -40,4 +48,18 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+    ////Adding ViewModel, Lifedata Dep.
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${VIEW_MODEL_VERSION}"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${VIEW_MODEL_VERSION}"
+    implementation "androidx.fragment:fragment-ktx:${FRAGMENT_DATA_MODEL}"
+    implementation "androidx.activity:activity-ktx:${ACTIVITY_VERSION}"
+
+    ////Retrofit2 and friend Deps.
+    implementation "com.squareup.retrofit2:retrofit:${RETROFIT_2_VERSION}"
+    implementation "com.squareup.retrofit2:converter-gson:${RETROFIT_2_VERSION}"
+
+
+
 }
