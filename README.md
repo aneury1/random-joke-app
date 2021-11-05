@@ -7,7 +7,7 @@ This application would be a showcase of how to use MVVM pattern in an android ap
 
 it follow the design from:
 
-[Figma Design]()https://www.figma.com/file/tybhoB0l3jlSFDK0na3o0S/Untitled?node-id=0%3A1)
+[Figma Design](https://www.figma.com/file/tybhoB0l3jlSFDK0na3o0S/Untitled?node-id=0%3A1)
 
 ### Use case
 
