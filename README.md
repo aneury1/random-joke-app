@@ -3,6 +3,10 @@
 a fully-feature joke-api client for you!!
 This application will the user of the application to see random Jokes.
 
+This application would be a showcase of how to use MVVM pattern in an android application
+
+
+
 ### Use case
 
 - Create Splash Screen
