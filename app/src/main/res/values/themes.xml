@@ -14,6 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:background">@drawable/rj_splash_screen</item>
+        <item name="android:windowBackground">@drawable/rj_splash_screen</item>
+
     </style>
 </resources>
