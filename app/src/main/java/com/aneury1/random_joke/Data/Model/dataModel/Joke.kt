@@ -1,8 +1,8 @@
-package com.aneury1.random_joke.Model.dataModel
+package com.aneury1.random_joke.Data.Model.dataModel
 
 data class Joke(
-    var error: Boolean = false,
-    var amount: Int = 0,
+    val error: Boolean,
+    val amount: Int,
     var category: String,
     val delivery: String,
     val type: String,
@@ -14,9 +14,9 @@ data class Joke(
 )
 {
     companion object{
-        fun getFakeJoke() : Joke?{
+        fun getFakeJoke() : Joke{
             var joke : Joke = Joke(
-                 error= false,
+                 error= true,
                 amount =  1,
                 category = "String",
                 delivery ="String",

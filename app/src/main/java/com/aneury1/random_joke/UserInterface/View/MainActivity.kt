@@ -1,13 +1,11 @@
-package com.aneury1.random_joke.View
+package com.aneury1.random_joke.UserInterface.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import com.aneury1.random_joke.R
-import com.aneury1.random_joke.ViewModel.JokeViewModel
+import com.aneury1.random_joke.UserInterface.ViewModel.JokeViewModel
 import com.aneury1.random_joke.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        jokeViewModel.onCreate()
 
         binding.btnNextJoke.setOnClickListener{
             jokeViewModel.updateJoke()

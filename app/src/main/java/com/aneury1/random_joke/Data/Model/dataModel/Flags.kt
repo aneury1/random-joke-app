@@ -1,4 +1,4 @@
-package com.aneury1.random_joke.Model.dataModel
+package com.aneury1.random_joke.Data.Model.dataModel
 
 
 data class Flags(
