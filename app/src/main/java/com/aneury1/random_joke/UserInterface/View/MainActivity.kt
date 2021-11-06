@@ -1,5 +1,6 @@
 package com.aneury1.random_joke.UserInterface.View
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -14,6 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     val jokeViewModel: JokeViewModel by viewModels()
 
+    var colorFromCategory: HashMap<String, Color> = HashMap()
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +30,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         jokeViewModel.joke.observe(this, Observer {
-              Toast.makeText(applicationContext, "Test Update", Toast.LENGTH_LONG).show()
+           binding.tvSetupJoke.text = it.setup ?: it.joke
+            
+            if(it.type=="simple"){
+                binding.tvValue.text=""
+            }else{
+                binding.tvValue.text = it.delivery
+            }
         });
     }
 }

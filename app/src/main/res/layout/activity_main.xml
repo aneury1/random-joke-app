@@ -6,32 +6,47 @@
     android:layout_height="match_parent"
     android:background="@color/splashcolor1"
     tools:context=".UserInterface.View.MainActivity"
-
+    android:id="@+id/mainView"
     >
 
     <TextView
         android:id="@+id/tv_setup_joke"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:text="Que es un Terapeuta?"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
+        app:layout_constraintVertical_bias="0.106"
+        tools:text="Que es un Terapeuta?" />
 
     <Button
         android:id="@+id/btn_next_joke"
-        android:layout_width="313dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="152dp"
+        android:layout_width="341dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/btn_layout"
         android:text="Actualizar Broma"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        tools:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next_joke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_setup_joke"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

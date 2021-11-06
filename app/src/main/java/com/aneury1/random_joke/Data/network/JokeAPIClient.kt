@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface JokeAPIClient {
 
-    @GET("/joke/Any")
+    @GET("/joke/Any?lang=es")
     suspend fun getOneJoke(): Response<Joke>
 
 }

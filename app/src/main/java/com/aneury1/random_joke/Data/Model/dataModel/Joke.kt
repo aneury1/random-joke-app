@@ -6,6 +6,7 @@ data class Joke(
     var category: String,
     val delivery: String,
     val type: String,
+    val joke: String,
     val setup : String,
     val flags: Flags,
     val id: Int,
@@ -25,7 +26,8 @@ data class Joke(
                 flags = Flags(false,false,false,false,false ,false),
                 id = 0,
                 safe= true,
-                lang= "String"
+                lang= "String",
+                joke = "String"
             )
             return joke
         }
