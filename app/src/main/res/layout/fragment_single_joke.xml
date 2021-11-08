@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/single_joke_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserInterface.View.SingleJoke">
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".UserInterface.View.SingleJoke"
+    tools:ignore="SpeakableTextPresentCheck"
+    android:focusable="true"
+    android:background="@color/splashcolor1">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:id="@+id/tv_setup_joke_single"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.253"
+        tools:text="Que es un Terapeuta?" />
+</androidx.constraintlayout.widget.ConstraintLayout>

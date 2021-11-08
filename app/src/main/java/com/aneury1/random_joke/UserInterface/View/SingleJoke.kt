@@ -5,56 +5,49 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.aneury1.random_joke.Data.Model.dataModel.Joke
 import com.aneury1.random_joke.R
+import com.aneury1.random_joke.Utils.Constant
+import com.aneury1.random_joke.Utils.PassData
+import com.aneury1.random_joke.databinding.ActivityMainBinding
+import com.aneury1.random_joke.databinding.FragmentSingleJokeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [SingleJoke.newInstance] factory method to
- * create an instance of this fragment.
- */
-class SingleJoke : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class SingleJoke : Fragment(){
+
+    lateinit var binding : FragmentSingleJokeBinding
+
+     lateinit var  bundler: Bundle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        bundler = savedInstanceState ?: Bundle()
+      ///  binding = FragmentSingleJokeBinding.inflate(layoutInflater)
+      ///  binding.tvSetupJokeSingle.text = "Fdfdfdffd"
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_single_joke, container, false)
+        val ret: View?= inflater.inflate(R.layout.fragment_two_part_joke, container, false)
+        bundler = savedInstanceState ?: Bundle()
+        val setup : String? = bundler.getString(Constant.JOKE_SETUP)
+        ret!!.findViewById<TextView>(R.id.tv_setup_joke_fr1).text = setup ?:" "
+       return ret
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SingleJoke.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
             SingleJoke().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
                 }
             }
     }
+
+    lateinit var  joke: Joke
+
+
 }
