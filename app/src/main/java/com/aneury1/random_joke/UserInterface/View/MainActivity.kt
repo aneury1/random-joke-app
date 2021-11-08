@@ -15,10 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     val jokeViewModel: JokeViewModel by viewModels()
 
-    var colorFromCategory: HashMap<String, Color> = HashMap()
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)

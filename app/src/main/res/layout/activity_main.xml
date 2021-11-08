@@ -49,4 +49,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_setup_joke"
         app:layout_constraintVertical_bias="0.0" />
+
+    <!--
+      <FrameLayout
+
+          app:layout_constraintBottom_toTopOf="0dp"
+          app:layout_constraintBaseline_toBottomOf="0dp"
+          app:layout_constraintLeft_toLeftOf="0dp"
+          app:layout_constraintLeft_toRightOf="0dp"
+          android:background="@color/teal_200"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+    />-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
